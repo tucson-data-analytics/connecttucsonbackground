@@ -6,35 +6,34 @@
   <title>Gradient Animation</title>
   <style>
     body {
-      margin: 0; /* Remove default body margin */
+      margin: 0;
     }
 
-    .blue-pink-gradient-animated-bg {
+    .custom-gradient-animated-bg {
       width: 100vw;
       height: 100vh;
-      background: linear-gradient(-4deg, #fca0c9 0%, #003a70 75%, #003a70 100%);
-      background-size: 400% 400%;
-      animation: gradientPulse 8s ease infinite;
-      margin: 0; /* Remove default body margin */
-      overflow: hidden; /* To make sure the gradient covers the entire body */
-      background-attachment: fixed; /* Fixed background */
+      background: linear-gradient(180deg, #293B64, #456FB1, #FF8700, #FFDE6A);
+      background-size: 800% 800%;
+      animation: gradientShift 12s ease infinite;
+      background-attachment: fixed;
+      overflow: hidden;
     }
 
-    @keyframes gradientPulse {
+    @keyframes gradientShift {
       0% {
-        background-position: 0% 50%;
+        background-position: 50% 0%;
       }
       50% {
-        background-position: 100% 50%;
+        background-position: 50% 100%;
       }
       100% {
-        background-position: 0% 50%;
+        background-position: 50% 0%;
       }
     }
   </style>
 </head>
 <body>
-  <section class="blue-pink-gradient-animated-bg">
+  <section class="custom-gradient-animated-bg">
     <!-- Your section content goes here -->
   </section>
 </body>
